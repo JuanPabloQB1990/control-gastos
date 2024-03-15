@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import CerrarBtn from "../img/cerrar.svg";
 import Message from "./Message";
 
@@ -48,9 +48,9 @@ const Modal = ({
     setCantidad("");
     setCategoria("");
   };
-
+  console.log(window.scrollY);
   return (
-    <div className="modal">
+    <div className="modal" style={{top: window.scrollY}}>
       <div className="cerrar-modal">
         <img src={CerrarBtn} alt="cerrar modal" onClick={ocultarMdal} />
       </div>
